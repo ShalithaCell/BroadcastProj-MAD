@@ -19,7 +19,7 @@
         </activity>
 
         <service
-            android:name=".BackgroundService"
+            android:name=".BackgroundServices"
             android:exported="false" />
     </application>
 

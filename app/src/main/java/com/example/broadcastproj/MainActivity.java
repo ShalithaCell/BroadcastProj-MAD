@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btnBroadcast;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onReceive(Context context, Intent intent) {
+            Toast.makeText(context, "Intent Detected.", Toast.LENGTH_LONG).show();
             String currentText = txtView.getText().toString();
             String message = intent.getStringExtra("value");
             currentText += "\nReceived "+ message;
